@@ -3,7 +3,7 @@ const documentClient = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async (event) => {
   console.log("event:", event);
-  const { name, date } = JSON.parse(event.body); // Parse body content from string to JSON
+  const { name, date } = JSON.parse(event); // Parse body content from string to JSON
 
   console.log("name:", name);
   console.log("date:", date);
